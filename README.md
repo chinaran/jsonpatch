@@ -12,6 +12,10 @@ go get -u github.com/chinaran/jsonpatch
 
 ## Example
 
+controller client using `client.RawPatch(types.JSONPatchType, patchData)`
+
+dynamic client, client set, see the following example:
+
 ```go
 import (
 	"context"
