@@ -88,3 +88,8 @@ func MakePatchPath(path string, newPart interface{}) string {
 func NewOperationData(patchValues ...*Operation) ([]byte, error) {
 	return json.Marshal(patchValues)
 }
+
+func MustNewOperationData(patchValues ...*Operation) []byte {
+	data, _ := json.Marshal(patchValues)
+	return data
+}

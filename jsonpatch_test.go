@@ -290,6 +290,12 @@ func TestNewOperationData(t *testing.T) {
 			if !reflect.DeepEqual(got, tt.want) {
 				t.Errorf("NewOperationData() = %v, want %v", got, tt.want)
 			}
+			if !tt.wantErr {
+				got := MustNewOperationData(tt.args.patchValues...)
+				if !reflect.DeepEqual(got, tt.want) {
+					t.Errorf("MustNewOperationData() = %v, want %v", got, tt.want)
+				}
+			}
 		})
 	}
 }
