@@ -37,7 +37,7 @@ func JSONPatchResource(dyclient dynamic.NamespaceableResourceInterface) (*unstru
 		jsonpatch.NewAddOperation("/spec/arrayx/0", "value-3"),
 		// replace patch
 		jsonpatch.NewReplaceOperation("/spec/arrayx", []string{"value-3", "value-4"}),
-		/// remove patch
+		// remove patch
 		jsonpatch.NewRemoveOperation("/spec/arrayx/0"),
 	}
 
